@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "clean": "rimraf out",
     "build": "next build",
+    "build:script": "pnpm run clean && next build && node ./scripts/export-html.js",
     "dev": "next dev",
     "lint": "eslint .",
     "start": "next start"
@@ -66,6 +68,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "postcss": "^8.5",
+    "rimraf": "^6.1.2",
     "tailwindcss": "^4.1.9",
     "tw-animate-css": "1.3.3",
     "typescript": "^5"
